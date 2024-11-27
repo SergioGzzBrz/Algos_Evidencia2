@@ -70,116 +70,137 @@ $(function() {
 <div class="title">parte_1.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="parte__1_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structEdge.html">    8</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structEdge.html">Edge</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structEdge.html#a60a34279415f9bff8844f0c0a8675ae3">   10</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structEdge.html#a60a34279415f9bff8844f0c0a8675ae3">u</a>, v, weight;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structEdge.html#a8b4bacc9a644c43b583ec3b60347e54b">   11</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structEdge.html#a8b4bacc9a644c43b583ec3b60347e54b">operator&lt;</a>(<a class="code" href="structEdge.html">Edge</a> <span class="keyword">const</span> &amp;other)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">return</span> weight &lt; other.<a class="code" href="structEdge.html#a4d58e1f4de38fa55549497175981ebab">weight</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
+<a href="parte__1_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Evidencia 2 - Algoritmos Avanzados</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * https://github.com/SergioGzzBrz/Algos_Evidencia2</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * MIT License</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Copyright (c) 2024 Sergio Eduardo Gonzalez Barraza</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structEdge.html#a8131f38bdb6a121c224d58316a07297a">   16</a></span>&#160;    <a class="code" href="structEdge.html#a8131f38bdb6a121c224d58316a07297a">Edge</a>(<span class="keywordtype">int</span> u, <span class="keywordtype">int</span> v, <span class="keywordtype">int</span> weight)</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        this-&gt;u = u;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        this-&gt;v = v;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        this-&gt;weight = weight;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="parte__1_8h.html#aad2155305a76c55c00392f38ce08410c">   24</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="parte__1_8h.html#aad2155305a76c55c00392f38ce08410c">MAXN</a> = 1e5;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">   25</a></span>&#160;vector&lt;int&gt; <a class="code" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a>(<a class="code" href="parte__1_8h.html#aad2155305a76c55c00392f38ce08410c">MAXN</a> + 1), <a class="code" href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">rankk</a>(<a class="code" href="parte__1_8h.html#aad2155305a76c55c00392f38ce08410c">MAXN</a> + 1, 0);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// Encontrar el representante de cada componente</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="parte__1_8h.html#aa359988036d614229d66289959d16299">   28</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="parte__1_8h.html#aa359988036d614229d66289959d16299">get</a>(<span class="keywordtype">int</span> node)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a>[node] = (<a class="code" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a>[node] != node) ? <a class="code" href="parte__1_8h.html#aa359988036d614229d66289959d16299">get</a>(<a class="code" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a>[node]) : node;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// Union por Rank</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="parte__1_8h.html#a39774805ec56a80fa1754f3b911b88b6">   34</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="parte__1_8h.html#a39774805ec56a80fa1754f3b911b88b6">dsu_union</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    a = <a class="code" href="parte__1_8h.html#aa359988036d614229d66289959d16299">get</a>(a);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    b = <a class="code" href="parte__1_8h.html#aa359988036d614229d66289959d16299">get</a>(b);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span> (a == b)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">rankk</a>[a] == <a class="code" href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">rankk</a>[b])</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structEdge.html">   17</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structEdge.html">Edge</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structEdge.html#a60a34279415f9bff8844f0c0a8675ae3">   20</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structEdge.html#a60a34279415f9bff8844f0c0a8675ae3">u</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structEdge.html#aac59de4b133921591182667a1e656e18">   23</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structEdge.html#aac59de4b133921591182667a1e656e18">v</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structEdge.html#a4d58e1f4de38fa55549497175981ebab">   26</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structEdge.html#a4d58e1f4de38fa55549497175981ebab">weight</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structEdge.html#a8b4bacc9a644c43b583ec3b60347e54b">   32</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structEdge.html#a8b4bacc9a644c43b583ec3b60347e54b">operator&lt;</a>(<a class="code" href="structEdge.html">Edge</a> <span class="keyword">const</span> &amp;other)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> weight &lt; other.<a class="code" href="structEdge.html#a4d58e1f4de38fa55549497175981ebab">weight</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structEdge.html#a8131f38bdb6a121c224d58316a07297a">   41</a></span>&#160;    <a class="code" href="structEdge.html#a8131f38bdb6a121c224d58316a07297a">Edge</a>(<span class="keywordtype">int</span> u, <span class="keywordtype">int</span> v, <span class="keywordtype">int</span> weight)</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">rankk</a>[a]++;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">rankk</a>[a] &gt; <a class="code" href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">rankk</a>[b])</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a>[b] = a;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a>[a] = b;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        this-&gt;u = u;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        this-&gt;v = v;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        this-&gt;weight = weight;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="parte__1_8h.html#aad2155305a76c55c00392f38ce08410c">   49</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="parte__1_8h.html#aad2155305a76c55c00392f38ce08410c">MAXN</a> = 1e5;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">   53</a></span>&#160;vector&lt;int&gt; <a class="code" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a>(<a class="code" href="parte__1_8h.html#aad2155305a76c55c00392f38ce08410c">MAXN</a> + 1);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// Complejidad: O(M LOG N) donde M son los edges y N son las conexiones</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="parte__1_8h.html#a86d501c4641d38ff62768e139e55a89e">   56</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="parte__1_8h.html#a86d501c4641d38ff62768e139e55a89e">kruskal_algorithm</a>(vector&lt;vector&lt;int&gt;&gt; &amp;adjacency_matrix, <span class="keywordtype">int</span> n)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    vector&lt;Edge&gt; edges;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    vector&lt;Edge&gt; minimum_spanning_tree;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// Agregar conexiones como edges</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i++)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; n; j++)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">if</span> (adjacency_matrix[i][j] &gt; 0)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                edges.emplace_back(i + 1, j + 1, adjacency_matrix[i][j]);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// Inicialmente, cada nodo del componente se representa a si mismo</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= n; i++)</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a>[i] = i;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">   57</a></span>&#160;vector&lt;int&gt; <a class="code" href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">rankk</a>(<a class="code" href="parte__1_8h.html#aad2155305a76c55c00392f38ce08410c">MAXN</a> + 1, 0);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="parte__1_8h.html#aa359988036d614229d66289959d16299">   63</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="parte__1_8h.html#aa359988036d614229d66289959d16299">get</a>(<span class="keywordtype">int</span> node)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a>[node] = (<a class="code" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a>[node] != node) ? <a class="code" href="parte__1_8h.html#aa359988036d614229d66289959d16299">get</a>(<a class="code" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a>[node]) : node;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="parte__1_8h.html#a39774805ec56a80fa1754f3b911b88b6">   72</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="parte__1_8h.html#a39774805ec56a80fa1754f3b911b88b6">dsu_union</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    a = <a class="code" href="parte__1_8h.html#aa359988036d614229d66289959d16299">get</a>(a);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    b = <a class="code" href="parte__1_8h.html#aa359988036d614229d66289959d16299">get</a>(b);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (a == b)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">// Ordenar los edges por peso en orden ascendente</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    sort(edges.begin(), edges.end());</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="structEdge.html">Edge</a> edge : edges)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="parte__1_8h.html#aa359988036d614229d66289959d16299">get</a>(edge.u) != <a class="code" href="parte__1_8h.html#aa359988036d614229d66289959d16299">get</a>(edge.v))</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            minimum_spanning_tree.push_back(edge);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="parte__1_8h.html#a39774805ec56a80fa1754f3b911b88b6">dsu_union</a>(edge.u, edge.v);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// Imprimir los edges del Minimum Spanning Tree</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;1.&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="structEdge.html">Edge</a> edge : minimum_spanning_tree)</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        cout &lt;&lt; <span class="charliteral">&#39;(&#39;</span> &lt;&lt; (char)(edge.u + <span class="charliteral">&#39;A&#39;</span> - 1) &lt;&lt; <span class="charliteral">&#39;,&#39;</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;             &lt;&lt; (char)(edge.v + <span class="charliteral">&#39;A&#39;</span> - 1) &lt;&lt; <span class="charliteral">&#39;)&#39;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    cout &lt;&lt; endl;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
-<div class="ttc" id="aparte__1_8h_html_a0db9b4fbec06fef73517e6110390600b"><div class="ttname"><a href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a></div><div class="ttdeci">vector&lt; int &gt; dsu(MAXN+1)</div></div>
-<div class="ttc" id="aparte__1_8h_html_a39774805ec56a80fa1754f3b911b88b6"><div class="ttname"><a href="parte__1_8h.html#a39774805ec56a80fa1754f3b911b88b6">dsu_union</a></div><div class="ttdeci">void dsu_union(int a, int b)</div><div class="ttdef"><b>Definition:</b> parte_1.h:34</div></div>
-<div class="ttc" id="aparte__1_8h_html_a70b97a250844c3fe2fda6dcce58cdddc"><div class="ttname"><a href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">rankk</a></div><div class="ttdeci">vector&lt; int &gt; rankk(MAXN+1, 0)</div></div>
-<div class="ttc" id="aparte__1_8h_html_a86d501c4641d38ff62768e139e55a89e"><div class="ttname"><a href="parte__1_8h.html#a86d501c4641d38ff62768e139e55a89e">kruskal_algorithm</a></div><div class="ttdeci">void kruskal_algorithm(vector&lt; vector&lt; int &gt;&gt; &amp;adjacency_matrix, int n)</div><div class="ttdef"><b>Definition:</b> parte_1.h:56</div></div>
-<div class="ttc" id="aparte__1_8h_html_aa359988036d614229d66289959d16299"><div class="ttname"><a href="parte__1_8h.html#aa359988036d614229d66289959d16299">get</a></div><div class="ttdeci">int get(int node)</div><div class="ttdef"><b>Definition:</b> parte_1.h:28</div></div>
-<div class="ttc" id="aparte__1_8h_html_aad2155305a76c55c00392f38ce08410c"><div class="ttname"><a href="parte__1_8h.html#aad2155305a76c55c00392f38ce08410c">MAXN</a></div><div class="ttdeci">const int MAXN</div><div class="ttdef"><b>Definition:</b> parte_1.h:24</div></div>
-<div class="ttc" id="astructEdge_html"><div class="ttname"><a href="structEdge.html">Edge</a></div><div class="ttdef"><b>Definition:</b> parte_1.h:9</div></div>
-<div class="ttc" id="astructEdge_html_a4d58e1f4de38fa55549497175981ebab"><div class="ttname"><a href="structEdge.html#a4d58e1f4de38fa55549497175981ebab">Edge::weight</a></div><div class="ttdeci">int weight</div><div class="ttdef"><b>Definition:</b> parte_1.h:10</div></div>
-<div class="ttc" id="astructEdge_html_a60a34279415f9bff8844f0c0a8675ae3"><div class="ttname"><a href="structEdge.html#a60a34279415f9bff8844f0c0a8675ae3">Edge::u</a></div><div class="ttdeci">int u</div><div class="ttdef"><b>Definition:</b> parte_1.h:10</div></div>
-<div class="ttc" id="astructEdge_html_a8131f38bdb6a121c224d58316a07297a"><div class="ttname"><a href="structEdge.html#a8131f38bdb6a121c224d58316a07297a">Edge::Edge</a></div><div class="ttdeci">Edge(int u, int v, int weight)</div><div class="ttdef"><b>Definition:</b> parte_1.h:16</div></div>
-<div class="ttc" id="astructEdge_html_a8b4bacc9a644c43b583ec3b60347e54b"><div class="ttname"><a href="structEdge.html#a8b4bacc9a644c43b583ec3b60347e54b">Edge::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(Edge const &amp;other) const</div><div class="ttdef"><b>Definition:</b> parte_1.h:11</div></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">// Incrementar el rango si ambos conjuntos tienen el mismo rango</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">rankk</a>[a] == <a class="code" href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">rankk</a>[b])</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">rankk</a>[a]++;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// Hacer que el árbol con menor rango apunte al de mayor rango</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">rankk</a>[a] &gt; <a class="code" href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">rankk</a>[b])</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a>[b] = a;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a>[a] = b;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="parte__1_8h.html#a86d501c4641d38ff62768e139e55a89e">  102</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="parte__1_8h.html#a86d501c4641d38ff62768e139e55a89e">kruskal_algorithm</a>(vector&lt;vector&lt;int&gt;&gt; &amp;adjacency_matrix, <span class="keywordtype">int</span> n)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    vector&lt;Edge&gt; edges;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    vector&lt;Edge&gt; minimum_spanning_tree;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// Crear las aristas a partir de la matriz de adyacencia</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i++)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; n; j++)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">if</span> (adjacency_matrix[i][j] &gt; 0)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                edges.emplace_back(i + 1, j + 1, adjacency_matrix[i][j]);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">// Inicializar DSU: cada nodo es su propio representante al inicio</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= n; i++)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a>[i] = i;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="comment">// Ordenar las aristas por peso en orden ascendente</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    sort(edges.begin(), edges.end());</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">// Procesar las aristas</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="structEdge.html">Edge</a> edge : edges)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="comment">// Verificar si los nodos de la arista están en diferentes componentes</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="parte__1_8h.html#aa359988036d614229d66289959d16299">get</a>(edge.u) != <a class="code" href="parte__1_8h.html#aa359988036d614229d66289959d16299">get</a>(edge.v))</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="comment">// Agregar la arista al Árbol de Expansión Mínima</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            minimum_spanning_tree.push_back(edge);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="comment">// Unir los conjuntos de los nodos</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <a class="code" href="parte__1_8h.html#a39774805ec56a80fa1754f3b911b88b6">dsu_union</a>(edge.u, edge.v);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="comment">// Imprimir las aristas del Árbol de Expansión Mínima</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Aristas del Árbol de Expansión Mínima:&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="structEdge.html">Edge</a> edge : minimum_spanning_tree)</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        cout &lt;&lt; <span class="charliteral">&#39;(&#39;</span> &lt;&lt; (char)(edge.u + <span class="charliteral">&#39;A&#39;</span> - 1) &lt;&lt; <span class="charliteral">&#39;,&#39;</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;             &lt;&lt; (char)(edge.v + <span class="charliteral">&#39;A&#39;</span> - 1) &lt;&lt; <span class="charliteral">&#39;)&#39;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
+<div class="ttc" id="aparte__1_8h_html_a0db9b4fbec06fef73517e6110390600b"><div class="ttname"><a href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a></div><div class="ttdeci">vector&lt; int &gt; dsu(MAXN+1)</div><div class="ttdoc">Vector que implementa el conjunto disjunto (DSU), donde cada nodo almacena el representante de su com...</div></div>
+<div class="ttc" id="aparte__1_8h_html_a39774805ec56a80fa1754f3b911b88b6"><div class="ttname"><a href="parte__1_8h.html#a39774805ec56a80fa1754f3b911b88b6">dsu_union</a></div><div class="ttdeci">void dsu_union(int a, int b)</div><div class="ttdoc">Une dos conjuntos utilizando la técnica de Union por Rango para mantener un árbol equilibrado.</div><div class="ttdef"><b>Definition:</b> parte_1.h:72</div></div>
+<div class="ttc" id="aparte__1_8h_html_a70b97a250844c3fe2fda6dcce58cdddc"><div class="ttname"><a href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">rankk</a></div><div class="ttdeci">vector&lt; int &gt; rankk(MAXN+1, 0)</div><div class="ttdoc">Vector que almacena el rango de cada componente en el DSU, utilizado para optimizar la unión de conju...</div></div>
+<div class="ttc" id="aparte__1_8h_html_a86d501c4641d38ff62768e139e55a89e"><div class="ttname"><a href="parte__1_8h.html#a86d501c4641d38ff62768e139e55a89e">kruskal_algorithm</a></div><div class="ttdeci">void kruskal_algorithm(vector&lt; vector&lt; int &gt;&gt; &amp;adjacency_matrix, int n)</div><div class="ttdoc">Algoritmo de Kruskal para encontrar el Árbol de Expansión Mínima en un grafo ponderado representado p...</div><div class="ttdef"><b>Definition:</b> parte_1.h:102</div></div>
+<div class="ttc" id="aparte__1_8h_html_aa359988036d614229d66289959d16299"><div class="ttname"><a href="parte__1_8h.html#aa359988036d614229d66289959d16299">get</a></div><div class="ttdeci">int get(int node)</div><div class="ttdoc">Encuentra el representante del conjunto al que pertenece un nodo, utilizando compresión de caminos pa...</div><div class="ttdef"><b>Definition:</b> parte_1.h:63</div></div>
+<div class="ttc" id="aparte__1_8h_html_aad2155305a76c55c00392f38ce08410c"><div class="ttname"><a href="parte__1_8h.html#aad2155305a76c55c00392f38ce08410c">MAXN</a></div><div class="ttdeci">const int MAXN</div><div class="ttdoc">Constante que define el número máximo de nodos permitido.</div><div class="ttdef"><b>Definition:</b> parte_1.h:49</div></div>
+<div class="ttc" id="astructEdge_html"><div class="ttname"><a href="structEdge.html">Edge</a></div><div class="ttdoc">Representa un borde (arista) en un grafo ponderado.</div><div class="ttdef"><b>Definition:</b> parte_1.h:18</div></div>
+<div class="ttc" id="astructEdge_html_a4d58e1f4de38fa55549497175981ebab"><div class="ttname"><a href="structEdge.html#a4d58e1f4de38fa55549497175981ebab">Edge::weight</a></div><div class="ttdeci">int weight</div><div class="ttdoc">Peso o costo asociado al borde.</div><div class="ttdef"><b>Definition:</b> parte_1.h:26</div></div>
+<div class="ttc" id="astructEdge_html_a60a34279415f9bff8844f0c0a8675ae3"><div class="ttname"><a href="structEdge.html#a60a34279415f9bff8844f0c0a8675ae3">Edge::u</a></div><div class="ttdeci">int u</div><div class="ttdoc">Nodo de inicio del borde.</div><div class="ttdef"><b>Definition:</b> parte_1.h:20</div></div>
+<div class="ttc" id="astructEdge_html_a8131f38bdb6a121c224d58316a07297a"><div class="ttname"><a href="structEdge.html#a8131f38bdb6a121c224d58316a07297a">Edge::Edge</a></div><div class="ttdeci">Edge(int u, int v, int weight)</div><div class="ttdoc">Constructor de la estructura Edge.</div><div class="ttdef"><b>Definition:</b> parte_1.h:41</div></div>
+<div class="ttc" id="astructEdge_html_a8b4bacc9a644c43b583ec3b60347e54b"><div class="ttname"><a href="structEdge.html#a8b4bacc9a644c43b583ec3b60347e54b">Edge::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(Edge const &amp;other) const</div><div class="ttdoc">Sobrecarga del operador &lt; para permitir la comparación de bordes según su peso. Útil para algoritmos ...</div><div class="ttdef"><b>Definition:</b> parte_1.h:32</div></div>
+<div class="ttc" id="astructEdge_html_aac59de4b133921591182667a1e656e18"><div class="ttname"><a href="structEdge.html#aac59de4b133921591182667a1e656e18">Edge::v</a></div><div class="ttdeci">int v</div><div class="ttdoc">Nodo de fin del borde.</div><div class="ttdef"><b>Definition:</b> parte_1.h:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

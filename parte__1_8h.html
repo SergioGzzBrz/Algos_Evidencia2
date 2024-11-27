@@ -89,24 +89,31 @@ Include dependency graph for parte_1.h:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEdge.html">Edge</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa un borde (arista) en un grafo ponderado.  <a href="structEdge.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a0db9b4fbec06fef73517e6110390600b"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">dsu</a> (<a class="el" href="parte__1_8h.html#aad2155305a76c55c00392f38ce08410c">MAXN</a>+1)</td></tr>
+<tr class="memdesc:a0db9b4fbec06fef73517e6110390600b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector que implementa el conjunto disjunto (DSU), donde cada nodo almacena el representante de su componente.  <a href="parte__1_8h.html#a0db9b4fbec06fef73517e6110390600b">More...</a><br /></td></tr>
 <tr class="separator:a0db9b4fbec06fef73517e6110390600b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70b97a250844c3fe2fda6dcce58cdddc"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">rankk</a> (<a class="el" href="parte__1_8h.html#aad2155305a76c55c00392f38ce08410c">MAXN</a>+1, 0)</td></tr>
+<tr class="memdesc:a70b97a250844c3fe2fda6dcce58cdddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector que almacena el rango de cada componente en el DSU, utilizado para optimizar la unión de conjuntos.  <a href="parte__1_8h.html#a70b97a250844c3fe2fda6dcce58cdddc">More...</a><br /></td></tr>
 <tr class="separator:a70b97a250844c3fe2fda6dcce58cdddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa359988036d614229d66289959d16299"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parte__1_8h.html#aa359988036d614229d66289959d16299">get</a> (int node)</td></tr>
+<tr class="memdesc:aa359988036d614229d66289959d16299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encuentra el representante del conjunto al que pertenece un nodo, utilizando compresión de caminos para optimizar futuras consultas.  <a href="parte__1_8h.html#aa359988036d614229d66289959d16299">More...</a><br /></td></tr>
 <tr class="separator:aa359988036d614229d66289959d16299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39774805ec56a80fa1754f3b911b88b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parte__1_8h.html#a39774805ec56a80fa1754f3b911b88b6">dsu_union</a> (int a, int b)</td></tr>
+<tr class="memdesc:a39774805ec56a80fa1754f3b911b88b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Une dos conjuntos utilizando la técnica de Union por Rango para mantener un árbol equilibrado.  <a href="parte__1_8h.html#a39774805ec56a80fa1754f3b911b88b6">More...</a><br /></td></tr>
 <tr class="separator:a39774805ec56a80fa1754f3b911b88b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86d501c4641d38ff62768e139e55a89e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parte__1_8h.html#a86d501c4641d38ff62768e139e55a89e">kruskal_algorithm</a> (vector&lt; vector&lt; int &gt;&gt; &amp;adjacency_matrix, int n)</td></tr>
+<tr class="memdesc:a86d501c4641d38ff62768e139e55a89e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Algoritmo de Kruskal para encontrar el Árbol de Expansión Mínima en un grafo ponderado representado por una matriz de adyacencia.  <a href="parte__1_8h.html#a86d501c4641d38ff62768e139e55a89e">More...</a><br /></td></tr>
 <tr class="separator:a86d501c4641d38ff62768e139e55a89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:aad2155305a76c55c00392f38ce08410c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parte__1_8h.html#aad2155305a76c55c00392f38ce08410c">MAXN</a> = 1e5</td></tr>
+<tr class="memdesc:aad2155305a76c55c00392f38ce08410c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constante que define el número máximo de nodos permitido.  <a href="parte__1_8h.html#aad2155305a76c55c00392f38ce08410c">More...</a><br /></td></tr>
 <tr class="separator:aad2155305a76c55c00392f38ce08410c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -125,6 +132,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Vector que implementa el conjunto disjunto (DSU), donde cada nodo almacena el representante de su componente. </p>
 
 </div>
 </div>
@@ -154,6 +163,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Une dos conjuntos utilizando la técnica de Union por Rango para mantener un árbol equilibrado. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Nodo representativo del primer conjunto. </td></tr>
+    <tr><td class="paramname">b</td><td>Nodo representativo del segundo conjunto. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aa359988036d614229d66289959d16299"></a>
@@ -171,6 +189,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Encuentra el representante del conjunto al que pertenece un nodo, utilizando compresión de caminos para optimizar futuras consultas. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Nodo del cual se quiere encontrar el representante. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Representante del conjunto al que pertenece el nodo. </dd></dl>
 
 </div>
 </div>
@@ -200,6 +227,18 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Algoritmo de Kruskal para encontrar el Árbol de Expansión Mínima en un grafo ponderado representado por una matriz de adyacencia. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">adjacency_matrix</td><td>Matriz de adyacencia que representa el grafo. </td></tr>
+    <tr><td class="paramname">n</td><td>Número de nodos en el grafo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>La complejidad del algoritmo es O(M log N), donde M es el número de bordes y N el número de nodos. </dd></dl>
+<p>Vector para almacenar todas las aristas del grafo.</p>
+<p>Vector para almacenar las aristas del Árbol de Expansión Mínima.</p>
+
 </div>
 </div>
 <a id="a70b97a250844c3fe2fda6dcce58cdddc"></a>
@@ -228,6 +267,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Vector que almacena el rango de cada componente en el DSU, utilizado para optimizar la unión de conjuntos. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -242,6 +283,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constante que define el número máximo de nodos permitido. </p>
 
 </div>
 </div>

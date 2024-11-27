@@ -71,25 +71,35 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Representa un borde (arista) en un grafo ponderado.  
+ <a href="structEdge.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="parte__1_8h_source.html">parte_1.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8b4bacc9a644c43b583ec3b60347e54b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEdge.html#a8b4bacc9a644c43b583ec3b60347e54b">operator&lt;</a> (<a class="el" href="structEdge.html">Edge</a> const &amp;other) const</td></tr>
+<tr class="memdesc:a8b4bacc9a644c43b583ec3b60347e54b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga del operador &lt; para permitir la comparación de bordes según su peso. Útil para algoritmos que requieren ordenar bordes.  <a href="structEdge.html#a8b4bacc9a644c43b583ec3b60347e54b">More...</a><br /></td></tr>
 <tr class="separator:a8b4bacc9a644c43b583ec3b60347e54b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8131f38bdb6a121c224d58316a07297a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEdge.html#a8131f38bdb6a121c224d58316a07297a">Edge</a> (int <a class="el" href="structEdge.html#a60a34279415f9bff8844f0c0a8675ae3">u</a>, int <a class="el" href="structEdge.html#aac59de4b133921591182667a1e656e18">v</a>, int <a class="el" href="structEdge.html#a4d58e1f4de38fa55549497175981ebab">weight</a>)</td></tr>
+<tr class="memdesc:a8131f38bdb6a121c224d58316a07297a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor de la estructura <a class="el" href="structEdge.html" title="Representa un borde (arista) en un grafo ponderado.">Edge</a>.  <a href="structEdge.html#a8131f38bdb6a121c224d58316a07297a">More...</a><br /></td></tr>
 <tr class="separator:a8131f38bdb6a121c224d58316a07297a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a60a34279415f9bff8844f0c0a8675ae3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEdge.html#a60a34279415f9bff8844f0c0a8675ae3">u</a></td></tr>
+<tr class="memdesc:a60a34279415f9bff8844f0c0a8675ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nodo de inicio del borde.  <a href="structEdge.html#a60a34279415f9bff8844f0c0a8675ae3">More...</a><br /></td></tr>
 <tr class="separator:a60a34279415f9bff8844f0c0a8675ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac59de4b133921591182667a1e656e18"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEdge.html#aac59de4b133921591182667a1e656e18">v</a></td></tr>
+<tr class="memdesc:aac59de4b133921591182667a1e656e18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nodo de fin del borde.  <a href="structEdge.html#aac59de4b133921591182667a1e656e18">More...</a><br /></td></tr>
 <tr class="separator:aac59de4b133921591182667a1e656e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d58e1f4de38fa55549497175981ebab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEdge.html#a4d58e1f4de38fa55549497175981ebab">weight</a></td></tr>
+<tr class="memdesc:a4d58e1f4de38fa55549497175981ebab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peso o costo asociado al borde.  <a href="structEdge.html#a4d58e1f4de38fa55549497175981ebab">More...</a><br /></td></tr>
 <tr class="separator:a4d58e1f4de38fa55549497175981ebab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Representa un borde (arista) en un grafo ponderado. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8131f38bdb6a121c224d58316a07297a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8131f38bdb6a121c224d58316a07297a">&#9670;&nbsp;</a></span>Edge()</h2>
 
@@ -130,6 +140,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructor de la estructura <a class="el" href="structEdge.html" title="Representa un borde (arista) en un grafo ponderado.">Edge</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">u</td><td>Nodo de inicio del borde. </td></tr>
+    <tr><td class="paramname">v</td><td>Nodo de fin del borde. </td></tr>
+    <tr><td class="paramname">weight</td><td>Peso o costo asociado al borde. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -157,6 +177,15 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sobrecarga del operador &lt; para permitir la comparación de bordes según su peso. Útil para algoritmos que requieren ordenar bordes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Otro objeto <a class="el" href="structEdge.html" title="Representa un borde (arista) en un grafo ponderado.">Edge</a> con el cual se compara. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> si el peso del borde actual es menor que el peso del borde proporcionado. </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -172,6 +201,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Nodo de inicio del borde. </p>
+
 </div>
 </div>
 <a id="aac59de4b133921591182667a1e656e18"></a>
@@ -186,6 +217,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Nodo de fin del borde. </p>
+
 </div>
 </div>
 <a id="a4d58e1f4de38fa55549497175981ebab"></a>
@@ -199,6 +232,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Peso o costo asociado al borde. </p>
 
 </div>
 </div>
