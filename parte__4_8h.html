@@ -88,8 +88,10 @@ Include dependency graph for parte_4.h:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a903d5ebff912db8f0d349f5828c7ef05"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parte__4_8h.html#a903d5ebff912db8f0d349f5828c7ef05">euclidean_distance</a> (pair&lt; int, int &gt; a, pair&lt; int, int &gt; b)</td></tr>
+<tr class="memdesc:a903d5ebff912db8f0d349f5828c7ef05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula la distancia euclidiana entre dos puntos en un plano cartesiano.  <a href="parte__4_8h.html#a903d5ebff912db8f0d349f5828c7ef05">More...</a><br /></td></tr>
 <tr class="separator:a903d5ebff912db8f0d349f5828c7ef05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a917c8c8ccdd86f4b9ecd0dabb393d885"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parte__4_8h.html#a917c8c8ccdd86f4b9ecd0dabb393d885">nearest_central</a> (const vector&lt; pair&lt; int, int &gt;&gt; &amp;coordinates, pair&lt; int, int &gt; new_house)</td></tr>
+<tr class="memdesc:a917c8c8ccdd86f4b9ecd0dabb393d885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encuentra la central más cercana a una nueva casa dada, calculando la distancia euclidiana.  <a href="parte__4_8h.html#a917c8c8ccdd86f4b9ecd0dabb393d885">More...</a><br /></td></tr>
 <tr class="separator:a917c8c8ccdd86f4b9ecd0dabb393d885"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -119,6 +121,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Calcula la distancia euclidiana entre dos puntos en un plano cartesiano. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Primer punto, representado como un par de enteros (x1, y1). </td></tr>
+    <tr><td class="paramname">b</td><td>Segundo punto, representado como un par de enteros (x2, y2). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>La distancia euclidiana entre los dos puntos. </dd></dl>
+
 </div>
 </div>
 <a id="a917c8c8ccdd86f4b9ecd0dabb393d885"></a>
@@ -146,6 +158,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Encuentra la central más cercana a una nueva casa dada, calculando la distancia euclidiana. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coordinates</td><td>Lista de pares de enteros que representan las coordenadas de las centrales. </td></tr>
+    <tr><td class="paramname">new_house</td><td>Par de enteros que representan las coordenadas de la nueva casa. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>No devuelve un valor, pero imprime las coordenadas de la central más cercana. </dd></dl>
+<p>Inicializamos la distancia mínima a un valor muy grande</p>
+<p>Índice de la central más cercana</p>
 
 </div>
 </div>

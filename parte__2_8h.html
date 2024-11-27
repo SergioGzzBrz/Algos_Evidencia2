@@ -87,13 +87,16 @@ Include dependency graph for parte_2.h:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a611f7cb77557acb1fcb0dc2e5157bd6d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parte__2_8h.html#a611f7cb77557acb1fcb0dc2e5157bd6d">solve</a> (int current, int bitmask, vector&lt; int &gt; &amp;dp, int n, vector&lt; vector&lt; int &gt;&gt; &amp;compatible, vector&lt; int &gt; &amp;child)</td></tr>
+<tr class="memdesc:a611f7cb77557acb1fcb0dc2e5157bd6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resuelve el problema del Viajante de Comercio usando programación dinámica con una máscara de bits para representar las ciudades visitadas.  <a href="parte__2_8h.html#a611f7cb77557acb1fcb0dc2e5157bd6d">More...</a><br /></td></tr>
 <tr class="separator:a611f7cb77557acb1fcb0dc2e5157bd6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0aa779b6097fd3c28405616274bc11bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parte__2_8h.html#a0aa779b6097fd3c28405616274bc11bd">traveling_salesman</a> (vector&lt; vector&lt; int &gt;&gt; &amp;adjacency_matrix, int n)</td></tr>
+<tr class="memdesc:a0aa779b6097fd3c28405616274bc11bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Algoritmo principal para resolver el problema del Viajante de Comercio utilizando DP con bitmasking.  <a href="parte__2_8h.html#a0aa779b6097fd3c28405616274bc11bd">More...</a><br /></td></tr>
 <tr class="separator:a0aa779b6097fd3c28405616274bc11bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a14c9dbab105f1b8b8182a022d73e610c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parte__2_8h.html#a14c9dbab105f1b8b8182a022d73e610c">INF</a> = (1 &lt;&lt; 30)</td></tr>
+<tr class="memdesc:a14c9dbab105f1b8b8182a022d73e610c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor largo para costo inicial de los caminos.  <a href="parte__2_8h.html#a14c9dbab105f1b8b8182a022d73e610c">More...</a><br /></td></tr>
 <tr class="separator:a14c9dbab105f1b8b8182a022d73e610c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -147,6 +150,21 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Resuelve el problema del Viajante de Comercio usando programación dinámica con una máscara de bits para representar las ciudades visitadas. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">current</td><td>Ciudad actual en la que nos encontramos. </td></tr>
+    <tr><td class="paramname">bitmask</td><td>Máscara de bits que representa el conjunto de ciudades visitadas. </td></tr>
+    <tr><td class="paramname">dp</td><td>Arreglo de programación dinámica que almacena el costo mínimo de recorrer las ciudades. </td></tr>
+    <tr><td class="paramname">n</td><td>Número total de ciudades. </td></tr>
+    <tr><td class="paramname">compatible</td><td>Matriz de adyacencia que representa la distancia entre ciudades. </td></tr>
+    <tr><td class="paramname">child</td><td>Arreglo que almacena el siguiente nodo en el camino más corto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>El costo mínimo para visitar todas las ciudades restantes. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Complejidad de O(N * 2^N), donde N es el número de ciudades </dd></dl>
+
 </div>
 </div>
 <a id="a0aa779b6097fd3c28405616274bc11bd"></a>
@@ -175,6 +193,22 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Algoritmo principal para resolver el problema del Viajante de Comercio utilizando DP con bitmasking. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">adjacency_matrix</td><td>Matriz de adyacencia que representa las distancias entre las ciudades. </td></tr>
+    <tr><td class="paramname">n</td><td>Número total de ciudades. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Arreglo de DP con todas las posibles máscaras de bits, inicializado a infinito</p>
+<p>Arreglo que guarda el siguiente nodo a visitar en cada estado</p>
+<p>Encontrar el mejor camino comenzando en la ciudad 0</p>
+<p>Vector para almacenar el camino recorrido</p>
+<p>Máscara que representa todas las ciudades visitadas</p>
+<p>Empezamos en la ciudad 0</p>
+<p>Ciudad siguiente a visitar</p>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -189,6 +223,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Valor largo para costo inicial de los caminos. </p>
 
 </div>
 </div>

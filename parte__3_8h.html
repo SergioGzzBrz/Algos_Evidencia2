@@ -87,10 +87,13 @@ Include dependency graph for parte_3.h:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8da5e9eb7c29d66261494eadf34b668b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parte__3_8h.html#a8da5e9eb7c29d66261494eadf34b668b">bfs_find_path</a> (const vector&lt; vector&lt; int &gt;&gt; &amp;adjacency_matrix, vector&lt; int &gt; &amp;parent, int n, int s, int d)</td></tr>
+<tr class="memdesc:a8da5e9eb7c29d66261494eadf34b668b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza una búsqueda en amplitud (BFS) para encontrar un camino desde el nodo fuente 's' hasta el nodo destino 'd'. Si encuentra un camino, actualiza el arreglo 'parent' para almacenar el nodo anterior de cada nodo en el camino.  <a href="parte__3_8h.html#a8da5e9eb7c29d66261494eadf34b668b">More...</a><br /></td></tr>
 <tr class="separator:a8da5e9eb7c29d66261494eadf34b668b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5901f525f28f21a149a22cadc239b41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parte__3_8h.html#ae5901f525f28f21a149a22cadc239b41">ford_fulkerson</a> (const vector&lt; vector&lt; int &gt;&gt; &amp;flow_adjacency_matrix, int n, int s, int t)</td></tr>
+<tr class="memdesc:ae5901f525f28f21a149a22cadc239b41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Algoritmo de Ford-Fulkerson para calcular el flujo máximo en una red de flujo. Usa BFS para encontrar caminos aumentantes y actualiza las capacidades residuales.  <a href="parte__3_8h.html#ae5901f525f28f21a149a22cadc239b41">More...</a><br /></td></tr>
 <tr class="separator:ae5901f525f28f21a149a22cadc239b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cc70ae4a9a910e2ccf5661646cf2bd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parte__3_8h.html#a8cc70ae4a9a910e2ccf5661646cf2bd6">maximum_flow</a> (const vector&lt; vector&lt; int &gt;&gt; &amp;flow_adjacency_matrix, int n)</td></tr>
+<tr class="memdesc:a8cc70ae4a9a910e2ccf5661646cf2bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula e imprime el flujo máximo en una red de flujo.  <a href="parte__3_8h.html#a8cc70ae4a9a910e2ccf5661646cf2bd6">More...</a><br /></td></tr>
 <tr class="separator:a8cc70ae4a9a910e2ccf5661646cf2bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -138,6 +141,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Realiza una búsqueda en amplitud (BFS) para encontrar un camino desde el nodo fuente 's' hasta el nodo destino 'd'. Si encuentra un camino, actualiza el arreglo 'parent' para almacenar el nodo anterior de cada nodo en el camino. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">adjacency_matrix</td><td>Matriz de adyacencia que representa las capacidades de las aristas entre nodos. </td></tr>
+    <tr><td class="paramname">parent</td><td>Arreglo que almacena el nodo anterior de cada nodo en el camino encontrado. </td></tr>
+    <tr><td class="paramname">n</td><td>Número de nodos en el grafo. </td></tr>
+    <tr><td class="paramname">s</td><td>Nodo fuente de la búsqueda. </td></tr>
+    <tr><td class="paramname">d</td><td>Nodo destino de la búsqueda. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> si se encontró un camino desde 's' a 'd', de lo contrario <code>false</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Complejidad: O(n + e), donde 'n' es el número de nodos y 'e' son las aristas </dd></dl>
+
 </div>
 </div>
 <a id="ae5901f525f28f21a149a22cadc239b41"></a>
@@ -178,6 +195,23 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Algoritmo de Ford-Fulkerson para calcular el flujo máximo en una red de flujo. Usa BFS para encontrar caminos aumentantes y actualiza las capacidades residuales. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flow_adjacency_matrix</td><td>Matriz de adyacencia que representa las capacidades de las aristas. </td></tr>
+    <tr><td class="paramname">n</td><td>Número de nodos en el grafo. </td></tr>
+    <tr><td class="paramname">s</td><td>Nodo fuente. </td></tr>
+    <tr><td class="paramname">t</td><td>Nodo sumidero. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>El flujo máximo de la red. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Complejidad: O(max_flow * e), donde 'max_flow' es el flujo máximo y 'e' es el número de aristas </dd></dl>
+<p>Grafo residual, inicializado con las capacidades originales de las aristas</p>
+<p>Arreglo para almacenar los padres de los nodos</p>
+<p>Inicializamos el flujo máximo a 0</p>
+<p>Inicializamos el flujo de la ruta como el valor máximo</p>
+
 </div>
 </div>
 <a id="a8cc70ae4a9a910e2ccf5661646cf2bd6"></a>
@@ -205,6 +239,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Calcula e imprime el flujo máximo en una red de flujo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flow_adjacency_matrix</td><td>Matriz de adyacencia que representa las capacidades de las aristas. </td></tr>
+    <tr><td class="paramname">n</td><td>Número de nodos en el grafo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Llamamos al algoritmo de Ford-Fulkerson para calcular el flujo máximo</p>
 
 </div>
 </div>
