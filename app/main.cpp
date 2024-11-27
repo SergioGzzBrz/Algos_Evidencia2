@@ -1,17 +1,21 @@
 /*
- * ----------------------------------------------------------------------------
- * File: main.cpp
- * Description: Main entry point for the Evidencia 2 - Algoritmos Avanzados
- *              project. Integrates and runs parts 1 through 4 of the project.
+ * SonarQube, open source software quality management tool.
+ * Copyright (C) 2008-2013 SonarSource
+ * http://github.com/SonarOpenCommunity/sonar-cxx
  *
- * Repository: https://github.com/SergioGzzBrz/Algos_Evidencia2
+ * SonarQube is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
  *
- * Copyright (c) 2024 Sergio Eduardo Gonzalez Barraza
- * License: MIT License (see LICENSE file for details)
+ * SonarQube is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
  *
- * This file is subject to the terms and conditions defined in the LICENSE file
- * located in the root directory of this project.
- * ----------------------------------------------------------------------------
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
 #include <fstream>
