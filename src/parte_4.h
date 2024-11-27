@@ -1,8 +1,8 @@
-#include <vector>
-#include <cmath>
 #include <cfloat>
+#include <cmath>
 #include <iostream>
 #include <utility>
+#include <vector>
 
 using namespace std;
 
@@ -13,7 +13,8 @@ double euclidean_distance(pair<int, int> a, pair<int, int> b)
 }
 
 // Función principal para encontrar la central más cercana
-void nearest_central(const vector<pair<int, int> > &coordinates, pair<int, int> new_house)
+void nearest_central(const vector<pair<int, int>> &coordinates,
+                     pair<int, int> new_house)
 {
     double min_distance = DBL_MAX;
     int nearest_central_idx = -1;

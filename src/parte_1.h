@@ -1,18 +1,20 @@
-#include <vector>
 #include <algorithm>
 #include <iostream>
 #include <utility>
+#include <vector>
 
 using namespace std;
 
 struct Edge
 {
     int u, v, weight;
-    bool operator<(Edge const &other) const { 
-        return weight < other.weight; 
+    bool operator<(Edge const &other) const
+    {
+        return weight < other.weight;
     }
 
-    Edge(int u, int v, int weight) {
+    Edge(int u, int v, int weight)
+    {
         this->u = u;
         this->v = v;
         this->weight = weight;
@@ -20,7 +22,7 @@ struct Edge
 };
 
 const int MAXN = 1e5;
-vector<int> dsu(MAXN+1), rankk(MAXN+1, 0);
+vector<int> dsu(MAXN + 1), rankk(MAXN + 1, 0);
 
 // Encontrar el representante de cada componente
 int get(int node)
@@ -51,7 +53,7 @@ void dsu_union(int a, int b)
 }
 
 // Complejidad: O(M LOG N) donde M son los edges y N son las conexiones
-void kruskal_algorithm(vector<vector<int> > &adjacency_matrix, int n)
+void kruskal_algorithm(vector<vector<int>> &adjacency_matrix, int n)
 {
     vector<Edge> edges;
     vector<Edge> minimum_spanning_tree;
@@ -90,8 +92,8 @@ void kruskal_algorithm(vector<vector<int> > &adjacency_matrix, int n)
 
     for (Edge edge : minimum_spanning_tree)
     {
-        cout << '(' << (char)(edge.u + 'A' - 1) << ',' << (char)(edge.v + 'A' - 1)
-             << ')' << endl;
+        cout << '(' << (char)(edge.u + 'A' - 1) << ','
+             << (char)(edge.v + 'A' - 1) << ')' << endl;
     }
     cout << endl;
 }

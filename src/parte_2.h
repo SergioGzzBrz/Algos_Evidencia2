@@ -1,14 +1,18 @@
-#include <vector>
 #include <climits>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 const int INF = (1 << 30); // Valor largo para costo inicial
 
 // complejidad de (N*2^N)
-int solve(int current, int bitmask, vector<int> &dp, int n,
-          vector<vector<int> > &compatible, vector<int> &child)
+int solve(int current,
+          int bitmask,
+          vector<int> &dp,
+          int n,
+          vector<vector<int>> &compatible,
+          vector<int> &child)
 {
     if (bitmask == 0)
     { // Caso base si ya visitamos todas las ciudades
@@ -44,11 +48,13 @@ int solve(int current, int bitmask, vector<int> &dp, int n,
     return dp[bitmask];
 }
 
-void traveling_salesman(vector<vector<int> > &adjacency_matrix, int n)
+void traveling_salesman(vector<vector<int>> &adjacency_matrix, int n)
 {
-    vector<int> dp(1 << n, INF); // Arreglo de DP con todas las bitmasks posibles
-    vector<int> child(1 << n,
-                      -1); // Guarda la siguiente ciudad a visitar en cada estado
+    vector<int> dp(1 << n,
+                   INF); // Arreglo de DP con todas las bitmasks posibles
+    vector<int> child(
+        1 << n,
+        -1); // Guarda la siguiente ciudad a visitar en cada estado
 
     // Encontramos el mejor camino empezando en la ciudad 0
     int minimumPath =
@@ -65,9 +71,8 @@ void traveling_salesman(vector<vector<int> > &adjacency_matrix, int n)
     int currentCity = 0;
     int nextCity = -1;
     // Reconstruimos el camino
-    while (currentBitmask !=
-           0)
-    {                                         // Paramos cuando ya visitamos todas las ciudades
+    while (currentBitmask != 0)
+    { // Paramos cuando ya visitamos todas las ciudades
         currentBitmask ^= (1 << currentCity); // Quitamos la ciudad del bitmask
         path.push_back(currentCity);
         nextCity = child[currentBitmask];

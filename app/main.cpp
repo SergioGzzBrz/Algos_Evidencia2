@@ -1,7 +1,7 @@
-#include <iostream>
 #include <fstream>
-#include <vector>
+#include <iostream>
 #include <utility>
+#include <vector>
 
 using namespace std;
 
@@ -15,9 +15,9 @@ int main()
     ifstream input("input.txt");
     int n;
     input >> n;
-    vector<vector<int> > adjacency_matrix(n, vector<int>(n));
-    vector<vector<int> > flow_capacity_matrix(n, vector<int>(n));
-    vector<pair<int, int> > coordinates(n);
+    vector<vector<int>> adjacency_matrix(n, vector<int>(n));
+    vector<vector<int>> flow_capacity_matrix(n, vector<int>(n));
+    vector<pair<int, int>> coordinates(n);
 
     for (int i = 0; i < n; i++)
     {
@@ -41,7 +41,8 @@ int main()
     {
         // skip empty lines
         getline(input, line);
-        if (line == "") {
+        if (line == "")
+        {
             i--;
             continue;
         }
@@ -50,11 +51,12 @@ int main()
         char num;
 
         int index = 0;
-        while (index < line.size() && line[index] != ',') {
+        while (index < line.size() && line[index] != ',')
+        {
             index++;
         }
-        x = line.substr(0, index+1);
-        y = line.substr(index+1);
+        x = line.substr(0, index + 1);
+        y = line.substr(index + 1);
         coordinates[i].first = stoi(x);
         coordinates[i].second = stoi(y);
     }
@@ -67,11 +69,12 @@ int main()
     char num;
 
     int index = 0;
-    while (index < line.size() && line[index] != ',') {
+    while (index < line.size() && line[index] != ',')
+    {
         index++;
     }
-    x = line.substr(0, index+1);
-    y = line.substr(index+1);
+    x = line.substr(0, index + 1);
+    y = line.substr(index + 1);
     new_house.first = stoi(x);
     new_house.second = stoi(y);
 
