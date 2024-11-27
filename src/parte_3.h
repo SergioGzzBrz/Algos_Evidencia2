@@ -14,11 +14,11 @@
 using namespace std;
 
 // complejidad: O(n + e): donde e son las edges
-bool bfsFindPath(const vector<vector<int>> &adjacency_matrix,
-                 vector<int> &parent,
-                 int n,
-                 int s,
-                 int d)
+bool bfs_find_path(const vector<vector<int>> &adjacency_matrix,
+                   vector<int> &parent,
+                   int n,
+                   int s,
+                   int d)
 {
     vector<bool> visited(n - 1, false);
 
@@ -53,10 +53,10 @@ bool bfsFindPath(const vector<vector<int>> &adjacency_matrix,
 }
 
 // complejidad: O(max_flow * e)xs
-int fordFulkerson(const vector<vector<int>> &flow_adjacency_matrix,
-                  int n,
-                  int s,
-                  int t)
+int ford_fulkerson(const vector<vector<int>> &flow_adjacency_matrix,
+                   int n,
+                   int s,
+                   int t)
 {
     // Residual graph
     vector<vector<int>> residual_graph = flow_adjacency_matrix;
@@ -65,7 +65,7 @@ int fordFulkerson(const vector<vector<int>> &flow_adjacency_matrix,
 
     int max_flow = 0;
 
-    while (bfsFindPath(residual_graph, parent, n, s, t))
+    while (bfs_find_path(residual_graph, parent, n, s, t))
     {
         int path_flow = numeric_limits<int>::max();
         for (int i = t; i != s; i = parent[i])
@@ -91,7 +91,7 @@ int fordFulkerson(const vector<vector<int>> &flow_adjacency_matrix,
 void maximum_flow(const vector<vector<int>> &flow_adjacency_matrix, int n)
 {
 
-    int max_flow = fordFulkerson(flow_adjacency_matrix, n, 0, n - 1);
+    int max_flow = ford_fulkerson(flow_adjacency_matrix, n, 0, n - 1);
 
     cout << "\n3.\n" << max_flow << "\n\n";
 }

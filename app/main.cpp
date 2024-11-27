@@ -1,9 +1,17 @@
 /*
- * Evidencia 2 - Algoritmos Avanzados
- * https://github.com/SergioGzzBrz/Algos_Evidencia2
+ * ----------------------------------------------------------------------------
+ * File: main.cpp
+ * Description: Main entry point for the Evidencia 2 - Algoritmos Avanzados
+ *              project. Integrates and runs parts 1 through 4 of the project.
  *
- * MIT License
+ * Repository: https://github.com/SergioGzzBrz/Algos_Evidencia2
+ *
  * Copyright (c) 2024 Sergio Eduardo Gonzalez Barraza
+ * License: MIT License (see LICENSE file for details)
+ *
+ * This file is subject to the terms and conditions defined in the LICENSE file
+ * located in the root directory of this project.
+ * ----------------------------------------------------------------------------
  */
 
 #include <fstream>
@@ -18,7 +26,7 @@ using namespace std;
 #include "parte_3.h"
 #include "parte_4.h"
 
-void getInputMatrix(vector<vector<int>> &matrix, int n, ifstream &input)
+void get_input_matrix(vector<vector<int>> &matrix, int n, ifstream &input)
 {
     for (int i = 0; i < n; i++)
     {
@@ -38,10 +46,10 @@ int main()
     vector<vector<int>> flow_capacity_matrix(n, vector<int>(n));
     vector<pair<int, int>> coordinates(n);
 
-    getInputMatrix(adjacency_matrix, n, input);
+    get_input_matrix(adjacency_matrix, n, input);
 
     // Leyendo la matriz de capacidad de flujo
-    getInputMatrix(flow_capacity_matrix, n, input);
+    get_input_matrix(flow_capacity_matrix, n, input);
 
     string line;
     for (int i = 0; i < n; i++)
