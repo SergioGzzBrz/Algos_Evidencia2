@@ -1,20 +1,20 @@
 include(Catch)
 
-add_executable("UnitTestZAlg1" "test_part1.cc")
-target_link_libraries("UnitTestZAlg1" PUBLIC "LibPart")
-target_link_libraries("UnitTestZAlg1" PRIVATE Catch2::Catch2WithMain)
+add_executable("UnitTests" "tests.cc")
+target_link_libraries("UnitTests" PUBLIC "LibPart")
+target_link_libraries("UnitTests" PRIVATE Catch2::Catch2WithMain)
 
 if(${ENABLE_WARNINGS})
     target_set_warnings(
         TARGET
-        "UnitTestZAlg1"
+        "UnitTests"
         ENABLE
         ${ENABLE_WARNINGS}
         AS_ERRORS
         ${ENABLE_WARNINGS_AS_ERRORS})
 endif()
 
-catch_discover_tests("UnitTestZAlg1")
+catch_discover_tests("UnitTests")
 
 if(ENABLE_COVERAGE)
     set(COVERAGE_MAIN "coverage")
@@ -27,7 +27,7 @@ if(ENABLE_COVERAGE)
         "${PROJECT_SOURCE_DIR}/build/*"
         "/usr/include/*")
     set(COVERAGE_EXTRA_FLAGS)
-    set(COVERAGE_DEPENDENCIES "UnitTestZAlg1")
+    set(COVERAGE_DEPENDENCIES "UnitTests")
 
     setup_target_for_coverage_gcovr_html(
         NAME
