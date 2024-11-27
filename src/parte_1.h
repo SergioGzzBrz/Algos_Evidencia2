@@ -142,7 +142,7 @@ void kruskal_algorithm(vector<vector<int>> &adjacency_matrix, int n)
     }
 
     // Imprimir las aristas del Árbol de Expansión Mínima
-    cout << "Aristas del Árbol de Expansión Mínima:" << endl;
+    cout << "1." << endl;
     for (Edge edge : minimum_spanning_tree)
     {
         cout << '(' << (char)(edge.u + 'A' - 1) << ','
