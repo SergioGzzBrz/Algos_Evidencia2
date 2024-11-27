@@ -1,3 +1,11 @@
+/*
+ * Evidencia 2 - Algoritmos Avanzados
+ * https://github.com/SergioGzzBrz/Algos_Evidencia2
+ *
+ * MIT License
+ * Copyright (c) 2024 Sergio Eduardo Gonzalez Barraza
+ */
+
 #include <fstream>
 #include <iostream>
 #include <utility>
@@ -10,6 +18,17 @@ using namespace std;
 #include "parte_3.h"
 #include "parte_4.h"
 
+void getInputMatrix(vector<vector<int>> &matrix, int n, ifstream &input)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            input >> matrix[i][j];
+        }
+    }
+}
+
 int main()
 {
     ifstream input("input.txt");
@@ -19,22 +38,10 @@ int main()
     vector<vector<int>> flow_capacity_matrix(n, vector<int>(n));
     vector<pair<int, int>> coordinates(n);
 
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            input >> adjacency_matrix[i][j];
-        }
-    }
+    getInputMatrix(adjacency_matrix, n, input);
 
     // Leyendo la matriz de capacidad de flujo
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            input >> flow_capacity_matrix[i][j];
-        }
-    }
+    getInputMatrix(flow_capacity_matrix, n, input);
 
     string line;
     for (int i = 0; i < n; i++)
