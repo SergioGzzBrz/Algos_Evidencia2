@@ -1,10 +1,3 @@
-/*
- * Evidencia 2 - Algoritmos Avanzados
- * https://github.com/SergioGzzBrz/Algos_Evidencia2
- *
- * MIT License
- * Copyright (c) 2024 Sergio Eduardo Gonzalez Barraza
- */
 
 #include <algorithm>
 #include <iostream>

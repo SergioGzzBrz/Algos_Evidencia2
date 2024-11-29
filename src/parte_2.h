@@ -1,10 +1,3 @@
-/*
- * Evidencia 2 - Algoritmos Avanzados
- * https://github.com/SergioGzzBrz/Algos_Evidencia2
- *
- * MIT License
- * Copyright (c) 2024 Sergio Eduardo Gonzalez Barraza
- */
 
 #include <climits>
 #include <iostream>
@@ -24,7 +17,7 @@ const int INF = (1 << 30);
 /// @param compatible Matriz de adyacencia que representa la distancia entre ciudades.
 /// @param child Arreglo que almacena el siguiente nodo en el camino más corto.
 /// @return El costo mínimo para visitar todas las ciudades restantes.
-/// @note Complejidad de O(N * 2^N), donde N es el número de ciudades
+/// @note Complejidad de O(N * N * 2^N), donde N es el número de ciudades
 int solve(int current,
           int bitmask,
           vector<int> &dp,
