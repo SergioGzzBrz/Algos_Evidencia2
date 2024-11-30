@@ -147,3 +147,5 @@ ipch/
 tags
 
 *.DS_Store
+
+tests/
