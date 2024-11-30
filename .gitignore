@@ -149,3 +149,4 @@ tags
 *.DS_Store
 
 tests/
+tools/
